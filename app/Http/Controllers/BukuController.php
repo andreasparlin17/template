@@ -25,7 +25,10 @@ class BukuController extends Controller
      */
     public function create()
     {
-        return view('buku.create');
+        return view('buku.create', [
+            'penerbit' => penerbit::get(),
+        ]);
+        //tambahin model penerbit nya
     }
 
     /**
