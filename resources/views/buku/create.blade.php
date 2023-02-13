@@ -27,9 +27,13 @@
             <label for="id_kategori" class="form-label">kategori</label>
             <input type="text" class="form-control" name="id_kategori" id="id_kategori">
             </div>
-          <div class="mb-1">
-            <label for="id_penerbit" class="form-label">id_penerbit</label>
-            <input type="text" class="form-control" name="id_penerbit" id="id_penerbit">
+            <div class="mb-3">
+              <label class="form-label">penerbit</label>
+              <select name="penerbit" id="" class="form-control">
+                @foreach ($penerbit as $p )
+                    <option value="{{$p->id}}">{{$p->nama}}</option>
+                @endforeach
+              </select>
             </div>
           <div class="mb-1">
             <label for="pengarang" class="form-label">Pengarang</label>
